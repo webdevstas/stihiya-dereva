@@ -35,18 +35,37 @@
   width: 100%;
   background: url("../img/main-bg.jpg") bottom no-repeat;
   background-size: cover;
+  z-index: 0;
+  position: relative;
+  display: block;
 }
 
 .main-title {
   color: #e6e8e1;
   font-size: 30px;
   font-weight: 600;
+  z-index: 10;
+  display: block;
+  position: relative;
 }
 
 .main-utp {
   color: #e6e8e1;
   font-size: 24px;
   font-weight: 600;
+  z-index: 10;
+  display: block;
+  position: relative;
+}
+
+.dark-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 body {
