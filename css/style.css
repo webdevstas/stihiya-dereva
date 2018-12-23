@@ -147,6 +147,28 @@
   text-align: center;
 }
 
+.offer-btn {
+  display: block;
+  margin: auto;
+  background-color: #d18040;
+  border: none;
+  outline: none;
+  color: #e6e8e1;
+  font-size: 36px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.offer-img {
+  display: block;
+  margin: auto;
+}
+
+.offer-img_wrap {
+  min-height: 320px;
+}
+
 .highlight {
   color: #d18040;
   font-size: 48px;
