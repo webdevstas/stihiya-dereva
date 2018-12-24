@@ -131,10 +131,14 @@
   text-align: center;
 }
 
+.offer {
+  padding-bottom: 40px;
+}
+
 .offer-descr {
   color: #373331;
   font-family: Roboto;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   text-align: center;
 }
@@ -173,6 +177,22 @@
   color: #d18040;
   font-size: 48px;
   font-weight: 700;
+}
+
+.features {
+  background-color: #e6e8e1;
+  padding-top: 10px;
+}
+
+.features-img {
+  display: block;
+  margin: auto;
+}
+
+.gallery-img {
+  display: block;
+  margin: auto;
+  width: 100%;
 }
 
 body {
