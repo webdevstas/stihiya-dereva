@@ -189,10 +189,24 @@
   margin: auto;
 }
 
+.gallery {
+  padding-bottom: 40px;
+}
+
 .gallery-img {
   display: block;
   margin: auto;
   width: 100%;
+}
+
+.delivery {
+  background-color: #e6e8e1;
+  padding-top: 10px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
 
 body {
