@@ -1,6 +1,7 @@
 .header {
-  height: 60px;
   background-color: #e6e8e1;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .header-logo {
@@ -30,15 +31,24 @@
   color: #373331;
 }
 
+@media (max-width: 768px) {
+  .header-descriptor {
+    text-align: center;
+  }
+  .header-num {
+    text-align: center;
+  }
+}
+
 .main {
-  height: 95vh;
   width: 100%;
   background: url("../img/main-bg.jpg") bottom no-repeat;
   background-size: cover;
   z-index: 0;
   position: relative;
   display: block;
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .main-content_wrap {
@@ -124,6 +134,27 @@
   z-index: 2;
 }
 
+@media (max-width: 992px) {
+  .main {
+    color: #e6e8e1;
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 10;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+  -utp {
+    color: #e6e8e1;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: 10;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+}
+
 .section-title {
   color: #d18040;
   font-size: 36px;
@@ -167,6 +198,12 @@
 .offer-img {
   display: block;
   margin: auto;
+  height: 100%;
+}
+
+.offer-img_second {
+  display: block;
+  margin: auto;
 }
 
 .offer-img_wrap {
@@ -182,11 +219,18 @@
 .features {
   background-color: #e6e8e1;
   padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .features-img {
   display: block;
   margin: auto;
+}
+
+@media (max-width: 992px) {
+  .features-wrap {
+    border-bottom: 2px solid #d18040;
+  }
 }
 
 .gallery {
@@ -197,6 +241,7 @@
   display: block;
   margin: auto;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .delivery {
@@ -207,6 +252,46 @@
 #map {
   width: 100%;
   height: 100%;
+}
+
+.footer {
+  color: #373331;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-adr {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer-mail {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer-btn {
+  display: block;
+  margin-bottom: 30px;
+  background-color: #d18040;
+  border: none;
+  outline: none;
+  color: #e6e8e1;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.footer-btn:after {
+  content: '';
+  background-image: url("img/arrow.png");
+}
+
+.footer-tel {
+  display: block;
 }
 
 body {

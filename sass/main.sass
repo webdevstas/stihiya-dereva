@@ -1,12 +1,12 @@
 .main
-  height: 95vh
   width: 100%
   background: url('../img/main-bg.jpg') bottom no-repeat
   background-size: cover
   z-index: 0
   position: relative
   display: block
-  padding-top: 10%
+  padding-top: 5%
+  padding-bottom: 5%
   &-content_wrap
     height: 100%
     width: 100%
@@ -75,3 +75,21 @@
   top: 0
   left: 0
   z-index: 2
+@media (max-width:992px)
+  .main
+    &-title
+    color: #e6e8e1
+    font-size: 30px
+    font-weight: 600
+    z-index: 10
+    display: block
+    position: relative
+    text-align: center
+  &-utp 
+    color: #e6e8e1
+    font-size: 24px
+    font-weight: 600
+    z-index: 10
+    display: block
+    position: relative
+    text-align: center

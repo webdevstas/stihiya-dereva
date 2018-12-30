@@ -1,6 +1,7 @@
 .header
-  height: 60px
   background-color: #e6e8e1
+  padding-top: 5px
+  padding-bottom: 10px
   &-logo
     height: 60px
     width: 60px
@@ -20,3 +21,9 @@
     font-size: 24px
     font-weight: 600
     color: #373331
+@media (max-width:768px) 
+  .header
+    &-descriptor
+      text-align: center
+    &-num
+      text-align: center
