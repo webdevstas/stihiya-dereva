@@ -210,6 +210,10 @@
   min-height: 320px;
 }
 
+.offer-table {
+  width: 100%;
+}
+
 .highlight {
   color: #d18040;
   font-size: 48px;
