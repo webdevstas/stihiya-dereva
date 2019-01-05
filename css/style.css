@@ -255,7 +255,7 @@
 
 #map {
   width: 100%;
-  height: 100%;
+  height: 300px;
 }
 
 .footer {
@@ -264,6 +264,7 @@
   font-weight: 700;
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: #e6e8e1;
 }
 
 .footer-adr {
@@ -296,6 +297,16 @@
 
 .footer-tel {
   display: block;
+}
+
+@media (max-width: 992px) {
+  .footer-adr, .footer-mail, .footer-tel {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .footer-btn {
+    margin: auto;
+  }
 }
 
 body {

@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
   <title>Мебель в Сочи</title>
-  <script src="js/ymaps.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=d5fc5916-860a-4b05-b2a3-d636ce1b6597&lang=ru_RU" type="text/javascript">
   </script>
 </head>
@@ -236,9 +235,9 @@
 <section class="footer">
   <div class="container">
     <div class="row">
-      <div class="col"><div id="map"></div></div>
+      <div class="col-lg-7"><div id="map"></div></div>
       <!-- /.col -->
-      <div class="col">
+      <div class="col-lg-5">
         <span class="footer-adr">Краснодарский край г.Сочи <br> ул. Ленина 53</span>
         <!-- /.footer-adr -->
         <span class="footer-mail">stihiyadereva@yandex.ru</span>
@@ -255,7 +254,30 @@
   <!-- /.container -->
 </section>
 <!-- /.footer -->
-
+<script type="text/javascript">
+  // Функция ymaps.ready() будет вызвана, когда
+  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+  ymaps.ready(init);
+  function init(){ 
+      // Создание карты.    
+      var myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [43.429217, 39.919092],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 16
+      });
+      myPlacemark = new ymaps.Placemark([43.429217, 39.919092], {
+            hintContent: 'Ленина 53',
+            balloonContent: 'Шоурум "Стихия дерева"'
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom'); 
+  }
+</script>
 </body>
 
 </html>
