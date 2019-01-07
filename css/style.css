@@ -122,6 +122,8 @@
   font-size: 18px;
   font-weight: 600;
   border-radius: 10px;
+  min-width: 180px;
+  cursor: pointer;
 }
 
 .dark-bg {
@@ -306,6 +308,34 @@
   }
   .footer-btn {
     margin: auto;
+  }
+}
+
+.thanks {
+  background: url("../img/fabrizio-verrecchia-268704-unsplash.jpg") center no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  padding-top: 20px;
+}
+
+.thanks-title {
+  color: #373331;
+  text-align: center;
+}
+
+.download {
+  color: #e6e8e1;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+@media (max-width: 768px) {
+  .download {
+    margin-top: 100px;
+  }
+  .thanks {
+    padding-top: 0;
   }
 }
 
