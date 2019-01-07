@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
   <title>Мебель в Сочи</title>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d5fc5916-860a-4b05-b2a3-d636ce1b6597&lang=ru_RU" type="text/javascript">
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d5fc5916-860a-4b05-b2a3-d636ce1b6597&lang=ru_RU"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
 </head>
 
 <body>
@@ -45,15 +45,25 @@
         </div>
         <!-- /.col-6 -->
         <div class="col-lg-6">
-          <form action="" class="main-form">
+          <div id="main-form_app">
+          <form v-if="false" action="/mailer/smart.php" method="POST" class="main-form">
             <div class="main-form_title">Заполните форму, чтобы получить прайс лист</div>
             <!-- /.main-form_title -->
-            <input type="text" class="main-form_input" placeholder="Имя">
-            <input type="text" class="main-form_input" placeholder="Телефон">
+            <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+            <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
             <button class="main-form_btn">ПОЛУЧИТЬ</button>
             <!-- /.main-form_btn -->
           </form>
           <!-- /.main-form -->
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#main-form_app',
+                data: {
+                  
+                }
+              })
+              </script>
         </div>
         <!-- /.col-6 -->
       </div>
