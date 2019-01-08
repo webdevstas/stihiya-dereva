@@ -76,6 +76,22 @@
   top: 0
   left: 0
   z-index: 2
+.modal
+  position: fixed
+  display: block
+  z-index: 100
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  width: 300px
+.close
+  transform: translateX(280px) translateY(-135px)
+  display: block
+  position: absolute
+  z-index: 150
+  cursor: pointer
+
+
 @media (max-width:992px)
   .main
     &-title

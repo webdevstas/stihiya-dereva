@@ -37,6 +37,7 @@
   }
   .header-num {
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -136,6 +137,24 @@
   z-index: 2;
 }
 
+.modal {
+  position: fixed;
+  display: block;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 300px;
+}
+
+.close {
+  transform: translateX(280px) translateY(-135px);
+  display: block;
+  position: absolute;
+  z-index: 150;
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   .main {
     color: #e6e8e1;
@@ -195,6 +214,7 @@
   font-weight: 700;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .offer-img {
@@ -220,6 +240,12 @@
   color: #d18040;
   font-size: 48px;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .offer-btn {
+    font-size: 24px;
+  }
 }
 
 .features {
@@ -290,6 +316,7 @@
   font-weight: 700;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .footer-btn:after {
@@ -328,11 +355,13 @@
   color: #e6e8e1;
   margin-top: 150px;
   margin-bottom: 150px;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black;
 }
 
 @media (max-width: 768px) {
   .download {
     margin-top: 100px;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black;
   }
   .thanks {
     padding-top: 0;
@@ -342,4 +371,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }

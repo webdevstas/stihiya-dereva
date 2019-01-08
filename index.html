@@ -14,6 +14,27 @@
 </head>
 
 <body>
+    
+<div id="app">
+  <div class="modal" v-if="isModal">
+    <div class="container">
+      <div class="row">
+          <img src="./img/icons/cancel.png" alt="" class="close" @click="closeModal">
+          <form action="/mailer/smart.php" method="POST" class="main-form modal">
+            <div class="main-form_title">Заполните форму</div>
+            <!-- /.main-form_title -->
+            <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+            <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+            <button class="main-form_btn">ОТПРАВИТЬ</button>
+            <!-- /.main-form_btn -->
+          </form>
+          <!-- /.main-form -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.modal -->
   <header class="header">
     <div class="container">
       <div class="row align-items-center justify-content-between">
@@ -45,7 +66,6 @@
         </div>
         <!-- /.col-6 -->
         <div class="col-lg-6">
-          <div id="main-form_app">
           <form action="/mailer/smart.php" method="POST" class="main-form">
             <div class="main-form_title">Заполните форму, чтобы скачать прайс лист</div>
             <!-- /.main-form_title -->
@@ -55,15 +75,6 @@
             <!-- /.main-form_btn -->
           </form>
           <!-- /.main-form -->
-        </div>
-        <script>
-            var app = new Vue({
-                el: '#main-form_app',
-                data: {
-                  
-                }
-              })
-              </script>
         </div>
         <!-- /.col-6 -->
       </div>
@@ -127,12 +138,12 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
-      <button class="offer-btn">СДЕЛАТЬ ЗАКАЗ</button>
+      <button class="offer-btn" @click="openModal">СДЕЛАТЬ ЗАКАЗ</button>
     </div>
     <!-- /.container -->
   </section>
   <!-- /.offer -->
-<section class="features">
+  <section class="features">
   <div class="container">
       <h2 class="section-title">ПОЧЕМУ ВАМ ВЫГОДНО КУПИТЬ У НАС?</h2>
       <!-- /.section-title -->
@@ -171,9 +182,9 @@
     <!-- /.row -->
   </div>
   <!-- /.container -->
-</section>
-<!-- /.features -->
-<section class="gallery">
+  </section>
+  <!-- /.features -->
+  <section class="gallery">
   <div class="container">
       <h2 class="section-title">ГАЛЕРЕЯ</h2>
     <div class="row">
@@ -213,12 +224,12 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
-    <button style="margin-top: 30px" class="offer-btn">ПОЛУЧИТЬ ПРАЙС</button>
+    <button style="margin-top: 30px" class="offer-btn" @click="openModal">ПОЛУЧИТЬ ПРАЙС</button>
   </div>
   <!-- /.container -->
-</section>
-<!-- /.gallery -->
-<!--<section class="delivery">
+  </section>
+  <!-- /.gallery -->
+  <!--<section class="delivery">
   <div class="container">
     <h2 class="section-title">ОТПРАВИМ ВАШ ЗАКАЗ ПО РФ</h2>
     <div class="row justify-content-between">
@@ -242,7 +253,7 @@
   </div>
 
 </section>-->
-<section class="footer">
+  <section class="footer">
   <div class="container">
     <div class="row">
       <div class="col-lg-7"><div id="map"></div></div>
@@ -252,7 +263,7 @@
         <!-- /.footer-adr -->
         <span class="footer-mail">stihiyadereva@yandex.ru</span>
         <!-- /.footer-mail -->
-        <button class="footer-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+        <button class="footer-btn" @click="openModal">ЗАКАЗАТЬ ЗВОНОК</button>
         <!-- /.footer-btn -->
         <span class="footer-tel">8-999-653-53-56</span>
         <!-- /.footer-tel -->
@@ -262,9 +273,9 @@
     <!-- /.row -->
   </div>
   <!-- /.container -->
-</section>
-<!-- /.footer -->
-<script type="text/javascript">
+  </section>
+  <!-- /.footer -->
+  <script type="text/javascript">
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(init);
@@ -287,7 +298,28 @@
         myMap.geoObjects.add(myPlacemark);
         myMap.behaviors.disable('scrollZoom'); 
   }
-</script>
+  </script>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+          isModal: false
+        },
+        methods: {
+          closeModal: function() {
+            if (this.isModal == true) {
+              this.isModal = false
+            }
+          },
+          openModal: function() {
+            if (this.isModal == false) {
+              this.isModal = true
+            }
+          }
+        }
+      })
+      </script>
 </body>
 
 </html>

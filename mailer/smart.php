@@ -25,7 +25,7 @@ $mail->Port = 465;                                    // TCP port to connect to
  
 $mail->setFrom('zayavochkin.site@yandex.ru', 'Сайт Заявка');   // От кого письмо 
 $mail->addAddress('stanislaw.spirin@yandex.ru');     // Add a recipient
-//$mail->addAddress('zakaz@eco-a.ru');               // Name is optional
+$mail->addAddress('stihiyadereva@yandex.ru');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
@@ -37,20 +37,14 @@ $mail->Subject = 'Новая заявка с сайта';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>
-	Телефон: ' . $phone . '<br>
-	Почта: ' . $email .'<br>
-	Дата рождения: ' . $date .'<br>
-	Место проживания: ' . $place .'<br>
-	Услуга: ' . $service . '<br>
-	Тема обращения:' .$topic . '<br>
-	Текст обращения:' . $text . ' ';
+	Телефон: ' . $phone . '<br>';
 
 $mail->AltBody = 'Это альтернативный текст';
 
 if(!$mail->send()) {
     echo "Ошибка";
 } else {
-    echo "Спасибо за заявку, мы свяжемся с Вами в ближайшее время.";
+	header('location: ../thankyou.html');
 }
 ?>
 
