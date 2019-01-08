@@ -148,9 +148,17 @@
 }
 
 .close {
-  transform: translateX(280px) translateY(-135px);
+  transform: translateX(280px) translateY(-125px);
   display: block;
-  position: absolute;
+  position: relative;
+  z-index: 150;
+  cursor: pointer;
+}
+
+.close-callback {
+  transform: translateX(250px) translateY(-40px);
+  display: block;
+  position: relative;
   z-index: 150;
   cursor: pointer;
 }

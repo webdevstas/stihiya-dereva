@@ -16,6 +16,7 @@
 <body>
     
 <div id="app">
+  <!-- Модалка заказа -->
   <div class="modal" v-if="isModal">
     <div class="container">
       <div class="row">
@@ -23,6 +24,7 @@
           <form action="/mailer/smart.php" method="POST" class="main-form modal">
             <div class="main-form_title">Заполните форму</div>
             <!-- /.main-form_title -->
+            <input type="hidden" name="callback" value="Заказ">
             <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
             <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
             <button class="main-form_btn">ОТПРАВИТЬ</button>
@@ -35,6 +37,50 @@
     <!-- /.container -->
   </div>
   <!-- /.modal -->
+
+  <!-- Модалка прайс -->
+  <div class="modal" v-if="showPrice">
+      <div class="container">
+        <div class="row">
+            <img src="./img/icons/cancel.png" alt="" class="close" @click="closePrice">
+            <form action="/mailer/smart.php" method="POST" class="main-form modal">
+              <div class="main-form_title">Заполните форму</div>
+              <!-- /.main-form_title -->
+              <input type="hidden" name="callback" value="Прайс">
+              <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+              <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+              <button class="main-form_btn">ОТПРАВИТЬ</button>
+              <!-- /.main-form_btn -->
+            </form>
+            <!-- /.main-form -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Модалка звонка -->
+  <div class="callback" v-if="showCallback">
+      <div class="container">
+        <div class="row">
+            <form action="/mailer/smart.php" method="POST" class="main-form modal">
+              <div class="main-form_title">Заполните форму</div>
+              <!-- /.main-form_title -->
+              <img src="./img/icons/cancel.png" alt="" class="close-callback" @click="closeCallback">
+              <input type="hidden" name="callback" value="Обратный звонок">
+              <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+              <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+              <button class="main-form_btn">ОТПРАВИТЬ</button>
+              <!-- /.main-form_btn -->
+            </form>
+            <!-- /.main-form -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.modal -->
   <header class="header">
     <div class="container">
       <div class="row align-items-center justify-content-between">
@@ -48,7 +94,7 @@
           <div class="header-num">8-999-653-53-56</div>
         </div>
         <!-- /.col -->
-        <div class="col-md-1"><a href="https://instagram.com/stihiyadereva/" target="_blank"><img src="./img/icons/001-instagram.svg" alt="" class="header-icon"></a></div>
+        <div class="col-md-1"><a href="https://instagram.com/stihiyadereva/" target="_blank"><img src="./img/icons/instagram.svg" alt="" class="header-icon"></a></div>
         <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -69,6 +115,7 @@
           <form action="/mailer/smart.php" method="POST" class="main-form">
             <div class="main-form_title">Заполните форму, чтобы скачать прайс лист</div>
             <!-- /.main-form_title -->
+            <input type="hidden" name="callback" value="Прайс главная">
             <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
             <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
             <button class="main-form_btn">СКАЧАТЬ</button>
@@ -224,7 +271,7 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
-    <button style="margin-top: 30px" class="offer-btn" @click="openModal">ПОЛУЧИТЬ ПРАЙС</button>
+    <button style="margin-top: 30px" class="offer-btn" @click="openPrice">ПОЛУЧИТЬ ПРАЙС</button>
   </div>
   <!-- /.container -->
   </section>
@@ -263,7 +310,7 @@
         <!-- /.footer-adr -->
         <span class="footer-mail">stihiyadereva@yandex.ru</span>
         <!-- /.footer-mail -->
-        <button class="footer-btn" @click="openModal">ЗАКАЗАТЬ ЗВОНОК</button>
+        <button class="footer-btn" @click="openCallback">ЗАКАЗАТЬ ЗВОНОК</button>
         <!-- /.footer-btn -->
         <span class="footer-tel">8-999-653-53-56</span>
         <!-- /.footer-tel -->
@@ -304,7 +351,9 @@
     var app = new Vue({
         el: '#app',
         data: {
-          isModal: false
+          isModal: false,
+          showCallback: false,
+          showPrice: false
         },
         methods: {
           closeModal: function() {
@@ -315,6 +364,26 @@
           openModal: function() {
             if (this.isModal == false) {
               this.isModal = true
+            }
+          },
+          closeCallback: function() {
+            if (this.showCallback == true) {
+              this.showCallback = false
+            }
+          },
+          openCallback: function() {
+            if (this.showCallback == false) {
+              this.showCallback = true
+            }
+          },
+          closePrice: function() {
+            if (this.showPrice == true) {
+              this.showPrice = false
+            }
+          },
+          openPrice: function() {
+            if (this.showPrice == false) {
+              this.showPrice = true
             }
           }
         }

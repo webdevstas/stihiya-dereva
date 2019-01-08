@@ -2,12 +2,7 @@
 
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
-$place = $_POST['user_place'];
-$date = $_POST['user_date'];
-$service = $_POST['user_service'];
-$topic = $_POST['user_topic'];
-$email = $_POST['user_mail'];
-$text = $_POST['user_text'];
+$form = $_POST['callback'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -37,7 +32,8 @@ $mail->Subject = 'Новая заявка с сайта';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>
-	Телефон: ' . $phone . '<br>';
+	Телефон: ' . $phone . '<br>
+	Форма: ' . $form ;
 
 $mail->AltBody = 'Это альтернативный текст';
 
