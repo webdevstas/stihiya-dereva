@@ -16,6 +16,7 @@
 <body>
     
 <div id="app">
+
   <!-- Модалка заказа -->
   <div class="modal" v-if="isModal">
     <div class="container">
@@ -362,7 +363,7 @@
             }
           },
           openModal: function() {
-            if (this.isModal == false) {
+            if (this.showCallback == false && this.showPrice == false) {
               this.isModal = true
             }
           },
@@ -372,7 +373,7 @@
             }
           },
           openCallback: function() {
-            if (this.showCallback == false) {
+            if (this.isModal == false && this.showPrice == false) {
               this.showCallback = true
             }
           },
@@ -382,7 +383,7 @@
             }
           },
           openPrice: function() {
-            if (this.showPrice == false) {
+            if (this.isModal == false && this.showCallback == false) {
               this.showPrice = true
             }
           }
