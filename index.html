@@ -279,6 +279,19 @@
   <!-- /.container -->
   </section>
   <!-- /.gallery -->
+  <section class="feedback">
+    <div class="container">
+      <h2 class="section-title">ОТЗЫВЫ</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6"><div class="feedback-img_wrap"><img src="img/feedback/feedback-img_1.png" alt="" class="feedback-img"></div></div>
+        <div class="col-lg-6"><div class="feedback-img_wrap"><img src="img/feedback/feedback-img_2.jpg" alt="" class="feedback-img"></div></div>
+        <!-- /.feedback-img_wrap -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.feedback -->
   <!--<section class="delivery">
   <div class="container">
     <h2 class="section-title">ОТПРАВИМ ВАШ ЗАКАЗ ПО РФ</h2>
@@ -350,15 +363,25 @@
   }
   </script>
 </div>
+
 <script>
     var app = new Vue({
         el: '#app',
         data: {
           isModal: false,
           showCallback: false,
-          showPrice: false
+          showPrice: false,
+          feedbackId: 0
         },
         methods: {
+          feedbackIdPlus: function(){
+           setInterval(() => {
+             this.feedbackId++
+             if(this.feedbackId > 1){
+               this.feedbackId = 0
+             }
+           }, 7000);
+        },      
           closeModal: function() {
             if (this.isModal == true) {
               this.isModal = false
@@ -389,8 +412,11 @@
               this.showPrice = true
             }
           }
-        }
-      })
+        },
+        created: function(){
+        this.feedbackIdPlus()
+      }
+    })
       </script>
 </body>
 

@@ -300,7 +300,6 @@
   font-weight: 700;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #e6e8e1;
 }
 
 .footer-adr {
@@ -346,6 +345,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footer-adr {
+    font-size: 22px;
+  }
+  .footer-mail {
+    font-size: 22px;
+  }
+  .footer-tel {
+    font-size: 22px;
+  }
+}
+
 .thanks {
   background: url("../img/fabrizio-verrecchia-268704-unsplash.jpg") center no-repeat;
   height: 100vh;
@@ -374,6 +385,25 @@
   .thanks {
     padding-top: 0;
   }
+}
+
+.feedback {
+  background-color: #e6e8e1;
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+
+.feedback-img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.feedback-img_wrap {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 20px;
 }
 
 body {
