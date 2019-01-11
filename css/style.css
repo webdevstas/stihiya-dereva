@@ -184,6 +184,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .main-form {
+    width: 100%;
+  }
+}
+
 .section-title {
   color: #d18040;
   font-size: 36px;

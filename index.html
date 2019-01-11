@@ -64,7 +64,7 @@
     <!-- /.modal -->
 
     <!-- Модалка звонка -->
-  <div class="callback" v-if="showCallback">
+  <div class="modal" v-if="showCallback">
       <div class="container">
         <div class="row">
             <form action="/mailer/smart.php" method="POST" class="main-form modal">
@@ -373,15 +373,7 @@
           showPrice: false,
           feedbackId: 0
         },
-        methods: {
-          feedbackIdPlus: function(){
-           setInterval(() => {
-             this.feedbackId++
-             if(this.feedbackId > 1){
-               this.feedbackId = 0
-             }
-           }, 7000);
-        },      
+        methods: {      
           closeModal: function() {
             if (this.isModal == true) {
               this.isModal = false
@@ -412,10 +404,7 @@
               this.showPrice = true
             }
           }
-        },
-        created: function(){
-        this.feedbackIdPlus()
-      }
+        }
     })
       </script>
 </body>
