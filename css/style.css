@@ -427,6 +427,12 @@
   padding-bottom: 20px;
 }
 
+.promo-form {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 .promo-title {
   display: block;
   margin: auto;
@@ -448,8 +454,9 @@
 }
 
 .promo-input {
-  width: 30%;
+  display: block;
   margin: auto;
+  margin-bottom: 10px;
 }
 
 .promo-input__label {
@@ -460,19 +467,6 @@
   text-align: center;
   color: #e6e8e1;
   margin-bottom: 10px;
-}
-
-@media (max-width: 359px) {
-  .promo-input {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .promo-input {
-    width: 50%;
-  }
 }
 
 body {
