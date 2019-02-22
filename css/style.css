@@ -419,6 +419,62 @@
   padding-bottom: 20px;
 }
 
+.promo {
+  background: url("../img/promo-bg.jpg") center no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.promo-title {
+  display: block;
+  margin: auto;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.promo-descr {
+  display: block;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.promo-input {
+  width: 30%;
+  margin: auto;
+}
+
+.promo-input__label {
+  display: block;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #e6e8e1;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 360px) {
+  .promo-input {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .promo-input {
+    width: 50%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
