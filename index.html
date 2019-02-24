@@ -215,7 +215,6 @@
   <section class="promo">
     
     <div class="container">
-      <div class="row">
         <div class="promo-title">Хотите посмотреть на продукцию вживую?</div>
         <!-- /.promo-title -->
         <div class="promo-descr">Дарим промокод на скидку в 10% на весь чек! Промокод действителен при посещении магазина в течение 7 дней.</div>
@@ -225,9 +224,9 @@
         <label for="promo-input" class="promo-input__label">Скидка будет привязана к номеру телефона, который вы введёте в поле:</label>
         <input type="tel" class="promo-input main-form_input" required name="user_phone">
         <button class="promo-btn main-form_btn">ПОЛУЧИТЬ</button><!-- /.promo-btn -->
-      </form>
-      </div>
-      <!-- /.row -->
+	  </form>
+	  <div class="promo-counter">Осталось {{promoHas}} промокодов. Всего подарено: {{promoCell}}.</div>
+	  <!-- /.promo-counter -->
     </div>
     <!-- /.container -->
   </section>
@@ -404,13 +403,34 @@
 </div>
 
 <script>
+
+function changeStor() {
+	let maxHas = 11;
+	let minCell = 39;
+	setInterval(()=>{
+		maxHas--;
+		minCell++;
+		if (maxHas === 0){
+			maxHas = 11;
+			minCell = 39;
+		}
+		localStorage.setItem("localHas", maxHas);
+		localStorage.setItem("localCell", minCell);
+	}, 1800000);
+}
+changeStor();
+
+
+</script>
+
+<script>
     var app = new Vue({
         el: '#app',
         data: {
           isModal: false,
           showCallback: false,
           showPrice: false,
-          feedbackId: 0
+		  feedbackId: 0
         },
         methods: {      
           closeModal: function() {
@@ -443,9 +463,17 @@
               this.showPrice = true
             }
           }
-        }
+		},
+		computed: {
+			promoHas: function(){
+				return localStorage.getItem("localHas");
+			},
+			promoCell: function(){
+				return localStorage.getItem("localCell");
+			}
+		}
     })
-      </script>
+	  </script>
 </body>
 
 </html>
