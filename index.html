@@ -2,335 +2,349 @@
 <html lang="ru">
 
 <head>
-  <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-  ym(51880439, "init", {
-       id:51880439,
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
+		ym(51880439, "init", {
+			id: 51880439,
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
 
-<!-- /Yandex.Metrika counter -->
-  <meta name="google-site-verification" content="917RhANRw-2gPUPZsKtCSEI0q-H-riO9r2U8700ApWo" />
-  <meta name="yandex-verification" content="5232a832aff4cd20" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="title" content="Недорогая мебель из бука в Сочи">
-  <meta name="description" content="Предлагаем вам качественную складную мебель из натурального дерева. Даём гарантию лучшей цены, благодаря собственному мелкосерийному производству в Краснодарском крае.">
-  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
-  <title>Мебель в Сочи</title>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d5fc5916-860a-4b05-b2a3-d636ce1b6597&lang=ru_RU"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <link rel="shortcut icon" type="image/icon" href="./favicon.ico"/>
+	<!-- /Yandex.Metrika counter -->
+	<meta name="google-site-verification" content="917RhANRw-2gPUPZsKtCSEI0q-H-riO9r2U8700ApWo" />
+	<meta name="yandex-verification" content="5232a832aff4cd20" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="title" content="Недорогая мебель из бука в Сочи">
+	<meta name="description" content="Предлагаем вам качественную складную мебель из натурального дерева. Даём гарантию лучшей цены, благодаря собственному мелкосерийному производству в Краснодарском крае.">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/style.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&amp;subset=cyrillic" rel="stylesheet">
+	<title>Мебель в Сочи</title>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=d5fc5916-860a-4b05-b2a3-d636ce1b6597&lang=ru_RU"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<link rel="shortcut icon" type="image/icon" href="./favicon.ico" />
 </head>
 
 <body>
-    <noscript><div><img src="https://mc.yandex.ru/watch/51880439" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<div id="app">
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/51880439" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<div id="app">
 
-  <!-- Модалка заказа -->
-  <div class="modal" v-if="isModal">
-    <div class="container">
-      <div class="row">
-          <img src="./img/icons/cancel.png" alt="Мебель в Сочи" class="close" @click="closeModal">
-          <form action="/mailer/smart.php" method="POST" class="main-form modal">
-            <div class="main-form_title">Заполните форму</div>
-            <!-- /.main-form_title -->
-            <input type="hidden" name="callback" value="Заказ">
-            <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
-            <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
-            <button class="main-form_btn">ОТПРАВИТЬ</button>
-            <!-- /.main-form_btn -->
-          </form>
-          <!-- /.main-form -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.modal -->
+		<!-- Модалка заказа -->
+		<div class="modal" v-if="isModal">
+			<div class="container">
+				<div class="row">
+					<img src="./img/icons/cancel.png" alt="Мебель в Сочи" class="close" @click="closeModal">
+					<form action="/mailer/smart.php" method="POST" class="main-form modal">
+						<div class="main-form_title">Заполните форму</div>
+						<!-- /.main-form_title -->
+						<input type="hidden" name="callback" value="Заказ">
+						<input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+						<input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+						<button class="main-form_btn">ОТПРАВИТЬ</button>
+						<!-- /.main-form_btn -->
+					</form>
+					<!-- /.main-form -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.modal -->
 
-  <!-- Модалка прайс -->
-  <div class="modal" v-if="showPrice">
-      <div class="container">
-        <div class="row">
-            <img src="./img/icons/cancel.png" alt="Купить мебель" class="close" @click="closePrice">
-            <form action="/mailer/smart.php" method="POST" class="main-form modal">
-              <div class="main-form_title">Заполните форму</div>
-              <!-- /.main-form_title -->
-              <input type="hidden" name="callback" value="Прайс">
-              <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
-              <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
-              <button class="main-form_btn">ОТПРАВИТЬ</button>
-              <!-- /.main-form_btn -->
-            </form>
-            <!-- /.main-form -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.modal -->
+		<!-- Модалка прайс -->
+		<div class="modal" v-if="showPrice">
+			<div class="container">
+				<div class="row">
+					<img src="./img/icons/cancel.png" alt="Купить мебель" class="close" @click="closePrice">
+					<form action="/mailer/smart.php" method="POST" class="main-form modal">
+						<div class="main-form_title">Заполните форму</div>
+						<!-- /.main-form_title -->
+						<input type="hidden" name="callback" value="Прайс">
+						<input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+						<input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+						<button class="main-form_btn">ОТПРАВИТЬ</button>
+						<!-- /.main-form_btn -->
+					</form>
+					<!-- /.main-form -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.modal -->
 
-    <!-- Модалка звонка -->
-  <div class="modal" v-if="showCallback">
-      <div class="container">
-        <div class="row">
-            <form action="/mailer/smart.php" method="POST" class="main-form modal">
-              <div class="main-form_title">Заполните форму</div>
-              <!-- /.main-form_title -->
-              <img src="./img/icons/cancel.png" alt="Недорогая мебель" class="close-callback" @click="closeCallback">
-              <input type="hidden" name="callback" value="Обратный звонок">
-              <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
-              <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
-              <button class="main-form_btn">ОТПРАВИТЬ</button>
-              <!-- /.main-form_btn -->
-            </form>
-            <!-- /.main-form -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </div>
-    <!-- /.modal -->
-  <header class="header">
-    <div class="container">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md-1"><img src="./img/header-logo.svg" alt="Мебель в Сочи" class="header-logo"></div>
-        <!-- /.col -->
-        <div class="col-md-5">
-          <h2 class="header-descriptor">Мебель из массива в Сочи</h2>
-        </div>
-        <!-- /.col -->
-        <div class="col-md-5">
-          <div class="header-num"><a href="tel:8-999-653-53-56" class="header-num__link">8-999-653-53-56</a></div>
-        </div>
-        <!-- /.col -->
-        <div class="col-md-1"><a href="https://instagram.com/stihiyadereva/" target="_blank"><img src="./img/icons/instagram.svg" alt="" class="header-icon"></a></div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </header>
-  <section class="main">
-    <div class="dark-bg"></div>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="main-title">Компания “Стихия дерева”</h1>
-          <p class="main-utp">Мебель из массива до 40% дешевле чем в самых популярных магазинах, за счёт собственного
-            серийного производства в Краснодарском крае</p>
-        </div>
-        <!-- /.col-6 -->
-        <div class="col-lg-6">
-          <form action="/mailer/smart.php" method="POST" class="main-form">
-            <div class="main-form_title">Заполните форму, чтобы скачать прайс лист</div>
-            <!-- /.main-form_title -->
-            <input type="hidden" name="callback" value="Прайс главная">
-            <input name="user_name" type="text" class="main-form_input" placeholder="Имя">
-            <input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
-            <button class="main-form_btn">СКАЧАТЬ</button>
-            <!-- /.main-form_btn -->
-          </form>
-          <!-- /.main-form -->
-        </div>
-        <!-- /.col-6 -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.main -->
-  <section class="offer">
-    <div class="container">
-      <h2 class="section-title">ХИТЫ ПРОДАЖ</h2>
-      <!-- /.section-title -->
-      <h3 class="offer-descr">СТОЛ КУХОННЫЙ СКЛАДНОЙ: <br>
-        <span class="highlight">1990</span> рублей</h3>
-      <div class="row justify-content-center">
-        <div class="col-xl-3 col-lg-6"><img src="img/offer/1.jpg" alt="Стол кухонный" class="offer-img"></div>
-        <!-- /.col -->
-        <div class="col-xl-3 col-lg-6"><img src="img/offer/2.jpg" alt="Складной стол" class="offer-img"></div>
-        <!-- /.col -->
-        <div class="col-xl-3 col-lg-4"><img src="img/offer/3.jpg" alt="Стол для кафе" class="offer-img"></div>
-        <!-- /.col -->
-        <div class="col-xl-2 col-lg-4"><img src="img/offer/4.jpg" alt="Продажа мебели" class="offer-img"></div>
-        <!-- /.col -->
-        <div class="col-xl-1 col-lg-4"><img src="img/offer/5.jpg" alt="Кухонная мебель" class="offer-img"></div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-md-6">
-          <p class="offer-props">Столешница: 70*70 см <br>
-            Высота: 72 см <br>
-            Массив бука</p>
-        </div>
-        <!-- /.col -->
-        <div class="col-md-6">
-          <p class="offer-descr">Складывается за 3 секунды и легко помещается за шкафом или под кроватью</p>
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-      <div class="row justify-content-around">
-        <div class="col-md-4">
-            <h3 class="offer-descr">СТОЛ ЖУРНАЛЬНЫЙ СКЛАДНОЙ: <br>
-              <span class="highlight">1900</span> рублей</h3>
-          <div class="offer-img_wrap"><img src="img/offer-table.jpg" alt="Журнальный стол складной" class="offer-img_second offer-table"></div>
-          <!-- /.offer-descr -->
-          <p class="offer-props">Столешница: 80*70 см <br>
-            Высота: 55 см<br>
-            Массив бука</p>
-        </div>
-        <!-- /.col -->
-        <div class="col-md-4">
-            <p class="offer-descr">ТАБУРЕТ СКЛАДНОЙ: <br>
-              <span class="highlight">450</span> рублей</p>
-            <!-- /.offer-descr -->
-          <div class="offer-img_wrap"><img src="img/offer-chair.jpg" alt="Табурет складной" class="offer-img_second offer-table"></div>
-          <p class="offer-props">Сидение: 33*26 см <br>
-            Высота: 33 см<br>
-            Массив бука</p>
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-      <button class="offer-btn" @click="openModal">СДЕЛАТЬ ЗАКАЗ</button>
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.offer -->
-  <section class="promo">
-    
-    <div class="container">
-        <div class="promo-title">Хотите посмотреть на продукцию вживую?</div>
-        <!-- /.promo-title -->
-        <div class="promo-descr">Дарим промокод на скидку в 10% на весь чек! Промокод действителен при посещении магазина в течение 7 дней.</div>
-        <!-- /.promo-descr -->
-        <form action="/mailer/smart.php" method="POST" class="promo-form">
-        <input type="hidden" name="callback" value="Промокод">
-        <label for="promo-input" class="promo-input__label">Скидка будет привязана к номеру телефона, который вы введёте в поле:</label>
-        <input type="tel" class="promo-input main-form_input" required name="user_phone">
-        <button class="promo-btn main-form_btn">ПОЛУЧИТЬ</button><!-- /.promo-btn -->
-	  </form>
-	  <div class="promo-counter">Осталось {{promoHas}} {{getWord}}. Всего подарено: {{promoCell}}.</div>
-	  <!-- /.promo-counter -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.promo -->
-  <section class="features">
-  <div class="container">
-      <h2 class="section-title">ПОЧЕМУ ВАМ ВЫГОДНО КУПИТЬ У НАС?</h2>
-      <!-- /.section-title -->
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="features-wrap">
-        <p class="offer-descr">Мы сохраняем низкую стоимость</p>
-        <!-- /.offer-descr -->
-        <img src="img/features/feature-1.png" alt="Мебель недорого" class="features-img">
-        <p class="offer-descr">За счёт собственного мелкосерийного производства</p>
-        <!-- /.offer-descr -->
-        </div>
-      </div>
-      <!-- /.col -->
-      <div class="col-lg-4">
-        <div class="features-wrap">
-        <p class="offer-descr">Используем только благородную древесину</p>
-        <!-- /.offer-descr -->
-        <img src="img/features/feature-2.png" alt="Мебель из бука" class="features-img">
-        <p class="offer-descr">Массив кавказского бука</p>
-        <!-- /.offer-descr -->
-        </div>
-      </div>
-      <!-- /.col -->
-      <div class="col-lg-4">
-       
-        <p class="offer-descr">Даём вам гарантию на все изделия</p>
-        <!-- /.offer-descr -->
-        <img src="img/features/feature-3.png" alt="Качественная мебель" class="features-img">
-        <p class="offer-descr">А так же двух недельный «тест драйв»</p>
-        <!-- /.offer-descr -->
-        
-      </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-  </section>
-  <!-- /.features -->
-  <section class="gallery">
-  <div class="container">
-      <h2 class="section-title">ГАЛЕРЕЯ</h2>
-    <div class="row">
-      <div class="col-md-4"><img src="img/gallery/1.jpg" alt="Мебель из массива" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/2.jpg" alt="Мебель для кафе" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/3.jpg" alt="Журнальный стол" class="gallery-img"></div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <div class="row">
-      <div class="col-md-4"><img src="img/gallery/4.jpg" alt="Стол из массива" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/5.jpg" alt="Стол из массива" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/6.jpg" alt="Кухонный комплект" class="gallery-img"></div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <div class="row">
-      <div class="col-md-4"><img src="img/gallery/7.jpg" alt="Стул складной" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/8.jpg" alt="Табурет складной" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-4"><img src="img/gallery/9.jpg" alt="Кухонный табурет" class="gallery-img"></div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <h2 class="section-title">ОКАЗЫВАЕМ УСЛУГИ ПО ГРАВИРОВКЕ</h2>
-    <div class="row justify-content-around">
-      <div class="col-md-3"><img src="img/grave/1.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-3"><img src="img/grave/3.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
-      <!-- /.col -->
-      <div class="col-md-3"><img src="img/grave/2.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-    <button style="margin-top: 30px" class="offer-btn" @click="openPrice">ПОЛУЧИТЬ ПРАЙС</button>
-  </div>
-  <!-- /.container -->
-  </section>
-  <!-- /.gallery -->
-  <section class="feedback">
-    <div class="container">
-      <h2 class="section-title">ОТЗЫВЫ</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-6"><div class="feedback-img_wrap"><img src="img/feedback/feedback-img_1.png" alt="Магазин мебели в Сочи " class="feedback-img"></div></div>
-        <div class="col-lg-6"><div class="feedback-img_wrap"><img src="img/feedback/feedback-img_2.jpg" alt="Отзывы мебель в Сочи" class="feedback-img"></div></div>
-        <!-- /.feedback-img_wrap -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-  </section>
-  <!-- /.feedback -->
-  <!--<section class="delivery">
+		<!-- Модалка звонка -->
+		<div class="modal" v-if="showCallback">
+			<div class="container">
+				<div class="row">
+					<form action="/mailer/smart.php" method="POST" class="main-form modal">
+						<div class="main-form_title">Заполните форму</div>
+						<!-- /.main-form_title -->
+						<img src="./img/icons/cancel.png" alt="Недорогая мебель" class="close-callback" @click="closeCallback">
+						<input type="hidden" name="callback" value="Обратный звонок">
+						<input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+						<input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+						<button class="main-form_btn">ОТПРАВИТЬ</button>
+						<!-- /.main-form_btn -->
+					</form>
+					<!-- /.main-form -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.modal -->
+		<header class="header">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-md-1"><img src="./img/header-logo.svg" alt="Мебель в Сочи" class="header-logo"></div>
+					<!-- /.col -->
+					<div class="col-md-5">
+						<h2 class="header-descriptor">Мебель из массива в Сочи</h2>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-5">
+						<div class="header-num"><a href="tel:8-999-653-53-56" class="header-num__link">8-999-653-53-56</a></div>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-1"><a href="https://instagram.com/stihiyadereva/" target="_blank"><img src="./img/icons/instagram.svg"
+							 alt="" class="header-icon"></a></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</header>
+		<section class="main">
+			<div class="dark-bg"></div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<h1 class="main-title">Компания “Стихия дерева”</h1>
+						<p class="main-utp">Мебель из массива до 40% дешевле чем в самых популярных магазинах, за счёт собственного
+							серийного производства в Краснодарском крае</p>
+					</div>
+					<!-- /.col-6 -->
+					<div class="col-lg-6">
+						<form action="/mailer/smart.php" method="POST" class="main-form">
+							<div class="main-form_title">Заполните форму, чтобы скачать прайс лист</div>
+							<!-- /.main-form_title -->
+							<input type="hidden" name="callback" value="Прайс главная">
+							<input name="user_name" type="text" class="main-form_input" placeholder="Имя">
+							<input name="user_phone" required type="tel" class="main-form_input" placeholder="Телефон">
+							<button class="main-form_btn">СКАЧАТЬ</button>
+							<!-- /.main-form_btn -->
+						</form>
+						<!-- /.main-form -->
+					</div>
+					<!-- /.col-6 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.main -->
+		<section class="offer">
+			<div class="container">
+				<h2 class="section-title">ХИТЫ ПРОДАЖ</h2>
+				<!-- /.section-title -->
+				<h3 class="offer-descr">СТОЛ КУХОННЫЙ СКЛАДНОЙ: <br>
+					<span class="highlight">1990</span> рублей</h3>
+				<div class="row justify-content-center">
+					<div class="col-xl-3 col-lg-6"><img src="img/offer/1.jpg" alt="Стол кухонный" class="offer-img"></div>
+					<!-- /.col -->
+					<div class="col-xl-3 col-lg-6"><img src="img/offer/2.jpg" alt="Складной стол" class="offer-img"></div>
+					<!-- /.col -->
+					<div class="col-xl-3 col-lg-4"><img src="img/offer/3.jpg" alt="Стол для кафе" class="offer-img"></div>
+					<!-- /.col -->
+					<div class="col-xl-2 col-lg-4"><img src="img/offer/4.jpg" alt="Продажа мебели" class="offer-img"></div>
+					<!-- /.col -->
+					<div class="col-xl-1 col-lg-4"><img src="img/offer/5.jpg" alt="Кухонная мебель" class="offer-img"></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-md-6">
+						<p class="offer-props">Столешница: 70*70 см <br>
+							Высота: 72 см <br>
+							Массив бука</p>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-6">
+						<p class="offer-descr">Складывается за 3 секунды и легко помещается за шкафом или под кроватью</p>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row justify-content-around">
+					<div class="col-md-4">
+						<h3 class="offer-descr">СТОЛ ЖУРНАЛЬНЫЙ СКЛАДНОЙ: <br>
+							<span class="highlight">1900</span> рублей</h3>
+						<div class="offer-img_wrap"><img src="img/offer-table.jpg" alt="Журнальный стол складной" class="offer-img_second offer-table"></div>
+						<!-- /.offer-descr -->
+						<p class="offer-props">Столешница: 80*70 см <br>
+							Высота: 55 см<br>
+							Массив бука</p>
+					</div>
+					<!-- /.col -->
+					<div class="col-md-4">
+						<p class="offer-descr">ТАБУРЕТ СКЛАДНОЙ: <br>
+							<span class="highlight">450</span> рублей</p>
+						<!-- /.offer-descr -->
+						<div class="offer-img_wrap"><img src="img/offer-chair.jpg" alt="Табурет складной" class="offer-img_second offer-table"></div>
+						<p class="offer-props">Сидение: 33*26 см <br>
+							Высота: 33 см<br>
+							Массив бука</p>
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<button class="offer-btn" @click="openModal">СДЕЛАТЬ ЗАКАЗ</button>
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.offer -->
+		<section class="promo">
+
+			<div class="container">
+				<div class="promo-title">Хотите посмотреть на продукцию вживую?</div>
+				<!-- /.promo-title -->
+				<div class="promo-descr">Дарим промокод на скидку в 10% на весь чек! Промокод действителен при посещении магазина в
+					течение 7 дней.</div>
+				<!-- /.promo-descr -->
+				<form action="/mailer/smart.php" method="POST" class="promo-form">
+					<input type="hidden" name="callback" value="Промокод">
+					<label for="promo-input" class="promo-input__label">Скидка будет привязана к номеру телефона, который вы введёте в
+						поле:</label>
+					<input type="tel" class="promo-input main-form_input" required name="user_phone">
+					<button class="promo-btn main-form_btn">ПОЛУЧИТЬ</button><!-- /.promo-btn -->
+				</form>
+				<!-- <div class="promo-counter">Осталось {{promoHas}} {{getWord}}. Всего подарено: {{promoCell}}.</div> -->
+				<!-- /.promo-counter -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.promo -->
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title">ПОЧЕМУ ВАМ ВЫГОДНО КУПИТЬ У НАС?</h2>
+				<!-- /.section-title -->
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="features-wrap">
+							<p class="offer-descr">Мы сохраняем низкую стоимость</p>
+							<!-- /.offer-descr -->
+							<img src="img/features/feature-1.png" alt="Мебель недорого" class="features-img">
+							<p class="offer-descr">За счёт собственного мелкосерийного производства</p>
+							<!-- /.offer-descr -->
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-lg-4">
+						<div class="features-wrap">
+							<p class="offer-descr">Используем только благородную древесину</p>
+							<!-- /.offer-descr -->
+							<img src="img/features/feature-2.png" alt="Мебель из бука" class="features-img">
+							<p class="offer-descr">Массив кавказского бука</p>
+							<!-- /.offer-descr -->
+						</div>
+					</div>
+					<!-- /.col -->
+					<div class="col-lg-4">
+
+						<p class="offer-descr">Даём вам гарантию на все изделия</p>
+						<!-- /.offer-descr -->
+						<img src="img/features/feature-3.png" alt="Качественная мебель" class="features-img">
+						<p class="offer-descr">А так же двух недельный «тест драйв»</p>
+						<!-- /.offer-descr -->
+
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.features -->
+		<section class="gallery">
+			<div class="container">
+				<h2 class="section-title">ГАЛЕРЕЯ</h2>
+				<div class="row">
+					<div class="col-md-4"><img src="img/gallery/1.jpg" alt="Мебель из массива" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/2.jpg" alt="Мебель для кафе" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/3.jpg" alt="Журнальный стол" class="gallery-img"></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-md-4"><img src="img/gallery/4.jpg" alt="Стол из массива" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/5.jpg" alt="Стол из массива" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/6.jpg" alt="Кухонный комплект" class="gallery-img"></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-md-4"><img src="img/gallery/7.jpg" alt="Стул складной" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/8.jpg" alt="Табурет складной" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-4"><img src="img/gallery/9.jpg" alt="Кухонный табурет" class="gallery-img"></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<h2 class="section-title">ОКАЗЫВАЕМ УСЛУГИ ПО ГРАВИРОВКЕ</h2>
+				<div class="row justify-content-around">
+					<div class="col-md-3"><img src="img/grave/1.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-3"><img src="img/grave/3.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
+					<!-- /.col -->
+					<div class="col-md-3"><img src="img/grave/2.jpg" alt="Гравировка в Сочи" class="gallery-img"></div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<button style="margin-top: 30px" class="offer-btn" @click="openPrice">ПОЛУЧИТЬ ПРАЙС</button>
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.gallery -->
+		<section class="feedback">
+			<div class="container">
+				<h2 class="section-title">ОТЗЫВЫ</h2>
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="feedback-img_wrap"><img src="img/feedback/feedback-img_1.png" alt="Магазин мебели в Сочи " class="feedback-img"></div>
+					</div>
+					<div class="col-lg-6">
+						<div class="feedback-img_wrap"><img src="img/feedback/feedback-img_2.jpg" alt="Отзывы мебель в Сочи" class="feedback-img"></div>
+					</div>
+					<!-- /.feedback-img_wrap -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.feedback -->
+		<!--<section class="delivery">
   <div class="container">
     <h2 class="section-title">ОТПРАВИМ ВАШ ЗАКАЗ ПО РФ</h2>
     <div class="row justify-content-between">
@@ -354,135 +368,131 @@
   </div>
 
 </section>-->
-  <section class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7"><div id="map"></div></div>
-      <!-- /.col -->
-      <div class="col-lg-5">
-        <span class="footer-adr">Краснодарский край г.Сочи <br> ул. Ленина 53</span>
-        <!-- /.footer-adr -->
-        <span class="footer-mail">stihiyadereva@yandex.ru</span>
-        <!-- /.footer-mail -->
-        <button class="footer-btn" @click="openCallback">ЗАКАЗАТЬ ЗВОНОК</button>
-        <!-- /.footer-btn -->
-        <span class="footer-tel">8-999-653-53-56</span>
-        <!-- /.footer-tel -->
-            </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-  </section>
-  <!-- /.footer -->
-  <script type="text/javascript">
-  // Функция ymaps.ready() будет вызвана, когда
-  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  ymaps.ready(init);
-  function init(){ 
-      // Создание карты.    
-      var myMap = new ymaps.Map("map", {
-          // Координаты центра карты.
-          // Порядок по умолчанию: «широта, долгота».
-          // Чтобы не определять координаты центра карты вручную,
-          // воспользуйтесь инструментом Определение координат.
-          center: [43.429217, 39.919092],
-          // Уровень масштабирования. Допустимые значения:
-          // от 0 (весь мир) до 19.
-          zoom: 16
-      });
-      myPlacemark = new ymaps.Placemark([43.429217, 39.919092], {
-            hintContent: 'Ленина 53',
-            balloonContent: 'Шоурум "Стихия дерева"'
-        });
-        myMap.geoObjects.add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom'); 
-  }
-  </script>
-</div>
+		<section class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div id="map"></div>
+					</div>
+					<!-- /.col -->
+					<div class="col-lg-5">
+						<span class="footer-adr">Краснодарский край г.Сочи <br> ул. Ленина 53</span>
+						<!-- /.footer-adr -->
+						<span class="footer-mail">stihiyadereva@yandex.ru</span>
+						<!-- /.footer-mail -->
+						<button class="footer-btn" @click="openCallback">ЗАКАЗАТЬ ЗВОНОК</button>
+						<!-- /.footer-btn -->
+						<span class="footer-tel">8-999-653-53-56</span>
+						<!-- /.footer-tel -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.footer -->
+		<script type="text/javascript">
+			// Функция ymaps.ready() будет вызвана, когда
+			// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+			ymaps.ready(init);
 
-<script>
-function changeStor() {
-	let maxHas = 11;
-	let minCell = 39;
-	setInterval(()=>{
-		maxHas--;
-		minCell++;
-		if (maxHas === 0){
-			maxHas = 11;
-			minCell = 39;
-		}
-		localStorage.setItem("localHas", maxHas);
-		localStorage.setItem("localCell", minCell);
-	}, 1800000);
-}
-changeStor();
-
-
-</script>
-
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-          isModal: false,
-          showCallback: false,
-          showPrice: false,
-		  feedbackId: 0
-        },
-        methods: {      
-          closeModal: function() {
-            if (this.isModal == true) {
-              this.isModal = false
-            }
-          },
-          openModal: function() {
-            if (this.showCallback == false && this.showPrice == false) {
-              this.isModal = true
-            }
-          },
-          closeCallback: function() {
-            if (this.showCallback == true) {
-              this.showCallback = false
-            }
-          },
-          openCallback: function() {
-            if (this.isModal == false && this.showPrice == false) {
-              this.showCallback = true
-            }
-          },
-          closePrice: function() {
-            if (this.showPrice == true) {
-              this.showPrice = false
-            }
-          },
-          openPrice: function() {
-            if (this.isModal == false && this.showCallback == false) {
-              this.showPrice = true
-            }
-          }
-		},
-		computed: {
-			promoHas: function() {
-				if('localStorage' in window && window['localStorage'] !== null) {
-					return localStorage.getItem("localHas");
-				} else return 7;
-				
-			},
-			promoCell: function() {
-				if('localStorage' in window && window['localStorage'] !== null) {
-					return localStorage.getItem("localCell");
-				} else return 43;
-			},
-			getWord: function() {
-				if(this.promoHas > 5) {
-					return "промокодов"
-				} else return "промокода"
+			function init() {
+				// Создание карты.    
+				var myMap = new ymaps.Map("map", {
+					// Координаты центра карты.
+					// Порядок по умолчанию: «широта, долгота».
+					// Чтобы не определять координаты центра карты вручную,
+					// воспользуйтесь инструментом Определение координат.
+					center: [43.429217, 39.919092],
+					// Уровень масштабирования. Допустимые значения:
+					// от 0 (весь мир) до 19.
+					zoom: 16
+				});
+				myPlacemark = new ymaps.Placemark([43.429217, 39.919092], {
+					hintContent: 'Ленина 53',
+					balloonContent: 'Шоурум "Стихия дерева"'
+				});
+				myMap.geoObjects.add(myPlacemark);
+				myMap.behaviors.disable('scrollZoom');
 			}
+		</script>
+	</div>
+
+	<script>
+		function changeStor() {
+			let maxHas = 11;
+			let minCell = 39;
+			setInterval(() => {
+				maxHas--;
+				minCell++;
+				if (maxHas === 0) {
+					maxHas = 11;
+					minCell = 39;
+				}
+				localStorage.setItem("localHas", maxHas);
+				localStorage.setItem("localCell", minCell);
+			}, 1800000);
 		}
-    })
-	  </script>
+		changeStor();
+	</script>
+
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				isModal: false,
+				showCallback: false,
+				showPrice: false,
+				feedbackId: 0
+			},
+			methods: {
+				closeModal: function () {
+					if (this.isModal == true) {
+						this.isModal = false
+					}
+				},
+				openModal: function () {
+					if (this.showCallback == false && this.showPrice == false) {
+						this.isModal = true
+					}
+				},
+				closeCallback: function () {
+					if (this.showCallback == true) {
+						this.showCallback = false
+					}
+				},
+				openCallback: function () {
+					if (this.isModal == false && this.showPrice == false) {
+						this.showCallback = true
+					}
+				},
+				closePrice: function () {
+					if (this.showPrice == true) {
+						this.showPrice = false
+					}
+				},
+				openPrice: function () {
+					if (this.isModal == false && this.showCallback == false) {
+						this.showPrice = true
+					}
+				}
+			},
+			computed: {
+				promoHas: function () {
+					return localStorage.getItem("localHas")
+				},
+				promoCell: function () {
+					return localStorage.getItem("localCell")
+				},
+				getWord: function () {
+					if (this.promoHas > 5) {
+						return "промокодов"
+					} else return "промокода"
+				}
+			}
+		})
+	</script>
 </body>
 
 </html>
