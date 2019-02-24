@@ -403,7 +403,6 @@
 </div>
 
 <script>
-
 function changeStor() {
 	let maxHas = 11;
 	let minCell = 39;
@@ -466,10 +465,15 @@ changeStor();
 		},
 		computed: {
 			promoHas: function() {
-				return localStorage.getItem("localHas");
+				if('localStorage' in window && window['localStorage'] !== null) {
+					return localStorage.getItem("localHas");
+				} else return 7;
+				
 			},
 			promoCell: function() {
-				return localStorage.getItem("localCell");
+				if('localStorage' in window && window['localStorage'] !== null) {
+					return localStorage.getItem("localCell");
+				} else return 43;
 			},
 			getWord: function() {
 				if(this.promoHas > 5) {
