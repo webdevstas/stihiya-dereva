@@ -225,7 +225,7 @@
         <input type="tel" class="promo-input main-form_input" required name="user_phone">
         <button class="promo-btn main-form_btn">ПОЛУЧИТЬ</button><!-- /.promo-btn -->
 	  </form>
-	  <div class="promo-counter">Осталось {{promoHas}} промокодов. Всего подарено: {{promoCell}}.</div>
+	  <div class="promo-counter">Осталось {{promoHas}} {{getWord}}. Всего подарено: {{promoCell}}.</div>
 	  <!-- /.promo-counter -->
     </div>
     <!-- /.container -->
@@ -465,11 +465,16 @@ changeStor();
           }
 		},
 		computed: {
-			promoHas: function(){
+			promoHas: function() {
 				return localStorage.getItem("localHas");
 			},
-			promoCell: function(){
+			promoCell: function() {
 				return localStorage.getItem("localCell");
+			},
+			getWord: function() {
+				if(this.promoHas > 5) {
+					return "промокодов"
+				} else return "промокода"
 			}
 		}
     })
