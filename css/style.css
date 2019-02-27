@@ -146,6 +146,16 @@
           box-shadow: 0px 2px 15px 2px #FFDE40;
 }
 
+.policy {
+  color: #fff;
+  font-size: 12px;
+}
+
+.policy-link {
+  color: #d18040;
+  text-decoration: underline;
+}
+
 .dark-bg {
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
@@ -168,8 +178,8 @@
 }
 
 .close {
-  -webkit-transform: translateX(280px) translateY(-125px);
-          transform: translateX(280px) translateY(-125px);
+  -webkit-transform: translateX(280px) translateY(-166px);
+          transform: translateX(280px) translateY(-166px);
   display: block;
   position: relative;
   z-index: 150;
@@ -333,7 +343,7 @@
 
 .footer {
   color: #373331;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   padding-top: 30px;
   padding-bottom: 30px;
