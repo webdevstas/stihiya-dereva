@@ -178,8 +178,8 @@
 }
 
 .close {
-  -webkit-transform: translateX(280px) translateY(-166px);
-          transform: translateX(280px) translateY(-166px);
+  -webkit-transform: translateX(280px) translateY(-192px);
+          transform: translateX(280px) translateY(-192px);
   display: block;
   position: relative;
   z-index: 150;
