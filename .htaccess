@@ -1,1 +1,7 @@
 Header set Cache-Control "max-age=31536000, public"
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^www.mebelvsochi\.com$ [NC]
+RewriteRule ^(.*)$ https://mebelvsochi.com [R=301,L]
